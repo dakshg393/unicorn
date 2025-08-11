@@ -196,7 +196,7 @@ const Header = () => {
               animate="visible"
               exit="exit"
               //className="fixed right-0 top-0 h-full w-3/4 max-w-xs bg-[#101929]/90 backdrop-blur-md text-white p-6 lg:hidden z-20 overflow-y-auto"
-              className="fixed right-0 top-0 h-full w-[64vw] bg-[#101929]/80 backdrop-blur-md text-white p-6 lg:hidden z-20"
+              className="fixed right-0 top-0 h-full w-[64vw] bg-[#101929]/80 backdrop-blur-md text-white  lg:hidden z-20"
             >
               <nav className="mt-16 bg-[#101929]/80  backdrop-blur-md ">
                 <ul className="flex flex-col gap-6 text-base font-normal">
