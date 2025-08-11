@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import searchImg from "../assets/images/servicesImages/searchImg.png";
 import { GoArrowUpRight } from "react-icons/go";
 import ItExpertise from "../assets/images/icons/ItExpertise.png";
@@ -35,6 +35,8 @@ import longArrow from "../assets/images/icons/longArrow.png";
 import FeaturesSection from "../components/FeaturesSection";
 
 import whyUsSecImg from "../assets/images/servicesImages/whyUsSecImg.png";
+import {useLocation, useSearchParams }  from "react-router-dom"
+
 
 const ServicesPage = () => {
   const services = [
@@ -49,7 +51,28 @@ const ServicesPage = () => {
     "Other Service",
   ];
 
+
+  const [searchParams] = useSearchParams();
   const [tabs, setTabs] = useState(0);
+
+
+    useEffect(() => {
+    const tabParam = searchParams.get("tab");
+    if (tabParam !== null) {
+      setTabs(Number(tabParam)); // set from URL
+    }
+  }, [searchParams]);
+
+
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash) {
+      const section = document.querySelector(location.hash);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
 
   return (
     <>
@@ -391,7 +414,7 @@ const ServicesPage = () => {
       </section>
 
       {/* Mobile App Development section */}
-      <section className="container mx-auto  lg:px-10 px-4 py-6 text-white lg:mt-24 md:mt-18 mt-8 flex flex-col md:flex-row   gap-6">
+      <section id="services" className="container mx-auto  lg:px-10 px-4 py-6 text-white lg:mt-24 md:mt-18 mt-8 flex flex-col md:flex-row   gap-6">
         {/* left section */}
         <div className="md:w-1/2 w-full relative h-fit">
           <div className="absolute md:left-[4.5px] left-[3.5px] top-0 h-full w-[2px] bg-[#8E90FF]"></div>

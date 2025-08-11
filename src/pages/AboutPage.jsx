@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AboutUsHero from "../assets/images/AboutUsHero.png";
 import expertsImg from "../assets/images/expertsImg.png";
 import aboutUsLaptop from "../assets/images/aboutUsLaptop.png";
@@ -20,8 +20,21 @@ import Pen from "../assets/Pen.svg";
 import SoftwareDev from "../assets/SoftwareDev.svg";
 import Solution from "../assets/Solution.svg";
 import memberImg from "../assets/images/memberImg.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const AboutPage = () => {
+
+
+const location = useLocation();
+  useEffect(() => {
+    if (location.hash) {
+      const section = document.querySelector(location.hash);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
+
   const cardData = [
     {
       img: clock,
@@ -204,7 +217,7 @@ const AboutPage = () => {
               <img src={CEO} alt="" />
               <div className="flex flex-col ">
                 <p className="font-medium md:text-[22px] text-base text-white ">
-                  Maverick Phoenix
+                  Narendra Patidar
                 </p>
                 <p className="text-sm text-[#969696] font-medium">
                   CEO at Unicorn Tech
@@ -213,13 +226,13 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-        <div className="w-full  mt-2  flex sm:justify-between justify-center sm:gap-0 gap-4 items-center flex-wrap gap-y-4">
+        {/* <div className="w-full  mt-2  flex sm:justify-between justify-center sm:gap-0 gap-4 items-center flex-wrap gap-y-4">
           <img src={application} alt="" />
           <img src={business} alt="" />
           <img src={enterprise} alt="" />
           <img src={agency} alt="" />
           <img src={company} alt="" />
-        </div>
+        </div> */}
 
         {/* Our Expertise section */}
         <div className=" mt-16">
@@ -377,7 +390,7 @@ const AboutPage = () => {
         </div>
 
         {/* team members */}
-        <div className="w-full space-y-10 text-white lg:my-32 md:my-28 my-20">
+        <div id="team" className="w-full space-y-10 text-white lg:my-32 md:my-28 my-20">
           <div className=" w-full flex flex-col justify-between items-center gap-y-5">
             <p className="lg:text-2xl md:text-xl text-lg font-normal ">Our Expert Team Members </p>
             <h4 className="lg:text-[32px] md:text-2xl text-xl font-bold md:leading-[40px] leading-5">

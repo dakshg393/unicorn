@@ -195,9 +195,10 @@ const Header = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed right-0 top-0 h-full w-64 bg-[#101929]/80 backdrop-blur-md text-white p-6 lg:hidden z-20"
+              //className="fixed right-0 top-0 h-full w-3/4 max-w-xs bg-[#101929]/90 backdrop-blur-md text-white p-6 lg:hidden z-20 overflow-y-auto"
+              className="fixed right-0 top-0 h-full w-[64vw] bg-[#101929]/80 backdrop-blur-md text-white p-6 lg:hidden z-20"
             >
-              <nav className="mt-16">
+              <nav className="mt-16 bg-[#101929]/80  backdrop-blur-md ">
                 <ul className="flex flex-col gap-6 text-base font-normal">
                   <li>
                     <NavLink
@@ -266,16 +267,16 @@ const Header = () => {
                                 initial="hidden"
                                 animate="visible"
                                 exit="hidden"
-                                className="ml-4 mt-2 flex flex-col gap-2 overflow-hidden"
+                                className="ml-4 mt-2 flex flex-col gap-2 overflow-hidden pointer-events-auto z-20"
                               >
-                                <li>IT Management Services</li>
-                                <li>Data Tracking Security</li>
-                                <li>Website Development</li>
-                                <li>CRM Solutions And Design</li>
-                                <li>UI/UX Design Services</li>
-                                <li>Technology Solution</li>
-                                <li>Software Development</li>
-                                <li>Graphic Design</li>
+                                <li><Link to={"/services?tab=1#services"}>IT Management Services</Link></li>
+                                <li><Link to={"/services?tab=1#services"}>Data Tracking Security</Link></li>
+                                <li><Link to={"/services?tab=1#services"}>Website Development</Link></li>
+                                <li><Link to={"/services?tab=1#services"}>CRM Solutions And Design</Link></li>
+                                <li><Link to={"/services?tab=1#services"}>UI/UX Design Services</Link></li>
+                                <li><Link to={"/services?tab=1#services"}>Technology Solution</Link></li>
+                                <li><Link to={"/services?tab=1#services"}>Software Development</Link></li>
+                                <li><Link to={"/services?tab=1#services"}>Graphic Design</Link></li>
                               </motion.ul>
                             )}
                           </AnimatePresence>
@@ -292,7 +293,7 @@ const Header = () => {
                                 initial="hidden"
                                 animate="visible"
                                 exit="hidden"
-                                className="ml-4 mt-2 flex flex-col gap-2 overflow-hidden"
+                                className="ml-4 mt-2 flex flex-col gap-2 overflow-hidden pointer-events-auto"
                               >
                                 <li>Healthcare</li>
                                 <li>Banks</li>
@@ -374,11 +375,12 @@ const Header = () => {
 
       {/* Buttons */}
       <div className="hidden lg:block">
-        <Link to={"/contact"}>
-          <p className="text-[#368DE5] underline text-lg font-normal">
-            Get an estimated
-          </p>
-        </Link>
+        <Link to="/contact">
+            <button className="py-[10px] px-[20px] border border-[#368DE5] rounded-lg text-[#368DE5] text-[16px]  cursor-pointer hover:bg-gradient-to-r hover:from-[#368DE5] hover:to-[#C7BDFF] hover:text-white transition-colors duration-300 ease-in-out ">
+              Get an Estimated
+            </button>
+          </Link>
+        
       </div>
     </header>
   );

@@ -384,7 +384,7 @@ const HomePage = () => {
 
       {/* third section */}
 
-      <section className="container mx-auto flex lg:px-10 px-4 py-4 justify-between gap-4">
+      {/* <section className="container mx-auto flex lg:px-10 px-4 py-4 justify-between gap-4">
         <div>
           <img src={application} alt="image" />
         </div>
@@ -400,7 +400,7 @@ const HomePage = () => {
         <div>
           <img src={company} alt=" image" />
         </div>
-      </section>
+      </section> */}
 
       {/*fourth section Unlock Creativity with Holistic Service Integration */}
 
@@ -480,7 +480,9 @@ const HomePage = () => {
               <div className="flex items-center w-fit gap-3 mt-3 text-lg font-normal">
                 {" "}
                 <span className="underline cursor-pointer ">
+                  <Link to={'/career'}>
                   Join Team
+                  </Link>
                 </span>{" "}
                 <BsArrowRight />
               </div>
@@ -707,9 +709,7 @@ const HomePage = () => {
         </div>
       </section> */}
 
-      {/* 
-
-       how can we help section */}
+      {/* how can we help section */}
 
       <section className="container mx-auto bg-[url(./assets/images/formBgImg.png)] bg-cover bg-no-repeat bg-center   py-10 mb-16">
         <div className="container mx-auto items-center flex  md:flex-row flex-col gap-5 text-white lg:px-10 px-4 py-6">

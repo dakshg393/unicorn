@@ -1,7 +1,7 @@
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
 import { motion } from "framer-motion";
-import { FaFacebookF, FaLinkedin } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io";
@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 import dropdownImg from "../assets/images/dropdownImg.png";
 import blueCircle from "../assets/images/blueCircle.png";
 import arrow from "../assets/arrow.svg";
+import { AiFillInstagram } from "react-icons/ai";
+
 const ServicesDropdown = () => {
   return (
     <motion.div
@@ -22,14 +24,14 @@ const ServicesDropdown = () => {
           <div>
             <h2 className="text-2xl font-bold mb-2">Services</h2>
             <ul>
-              <li>IT Management Services</li>
-              <li>Data Tracking Security</li>
-              <li>Website Development</li>
-              <li>CRM Solutions And Design</li>
-              <li>UI/UX Design Services</li>
-              <li>Technology Solution</li>
-              <li>Software Development</li>
-              <li>Graphic Design</li>
+              <li><Link to={"/services?tab=1#services"}>IT Management Services</Link></li>
+              <li><Link to={"/services?tab=1#services"}>Data Tracking Security</Link></li>
+              <li><Link to={"/services?tab=1#services"}>Website Development</Link></li>
+              <li><Link to={"/services?tab=1#services"}>CRM Solutions And Design</Link></li>
+              <li><Link to={"/services?tab=1#services"}>UI/UX Design Services</Link></li>
+              <li><Link to={"/services?tab=1#services"}>Technology Solution</Link></li>
+              <li><Link to={"/services?tab=1#services"}>Software Development</Link></li>
+              <li><Link to={"/services?tab=1#services"}>Graphic Design</Link></li>
             </ul>
           </div>
           <div>
@@ -60,16 +62,49 @@ const ServicesDropdown = () => {
           <div className="flex gap-4 items-center">
             follow Us:
             <div className="flex items-center gap-3 text-xl text-[#368DE5]">
-              <FaFacebookF />
+              
+              {/* <FaFacebookF />
               <BiLogoInstagramAlt />
-              <FaLinkedin />
-              <FaXTwitter />
-              <IoLogoWhatsapp />
+              
+            */}
+
+
+              <span className="p-1 bg-[#368DE5] rounded-full text-black text-xl">
+                <FaFacebookF />
+              </span>
+
+              <span className="p-1 bg-[#368DE5] rounded-full text-black text-xl">
+                <a href="https://www.instagram.com/its_unicorn_tech/" target="_blank" rel="noopener noreferrer">
+                  <AiFillInstagram />
+                </a>
+              </span>
+              
+
+              <span className="p-1 bg-[#368DE5] rounded-full text-black text-xl">
+                <FaLinkedinIn />
+              </span>
+
+              <span className="p-1 bg-[#368DE5] rounded-full text-black text-xl">
+                <a href="https://twitter.com/its_unicorntech" target="_blank" rel="noopener noreferrer">
+                  <FaXTwitter />
+                </a>
+              </span>
+
+              <span className="p-1 bg-[#368DE5] rounded-full text-black text-xl">
+                <a href="https://wa.me/9589572990?text=Hello%20I%20am%20interested" target="_blank" rel="noopener noreferrer">
+
+                  <IoLogoWhatsapp />
+                </a>
+              </span>
+
+
+
+
             </div>
           </div>
           <div>
             Looking for new Career?{" "}
-            <Link to={""} className="text-primary">
+            <Link to={"/career"} className="text-primary">
               {" "}
               We’re Hiring{" "}
             </Link>

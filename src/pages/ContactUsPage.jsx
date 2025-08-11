@@ -2,7 +2,7 @@ import { MdCall } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { BsPeopleFill } from "react-icons/bs";
-import { FaFacebook } from "react-icons/fa";
+import { FaFacebook, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
@@ -10,6 +10,7 @@ import { RiInstagramFill } from "react-icons/ri";
 import bulbIdeaImg from "../assets/images/bulbIdeaImg.png";
 import ReadyToWork from "../components/ReadyToWork";
 import { useState } from "react";
+import { AiFillInstagram } from "react-icons/ai";
 const ContactUsPage = () => {
   const [formData, setFormData] = useState({
     Firstname: "",
@@ -65,32 +66,60 @@ const ContactUsPage = () => {
           <MdCall className="lg:text-5xl md:text-4xl text-3xl" />
           <p className="font-bold lg:text-3xl md:text-2xl text-xl">Phone</p>
           <div>
-            <p>+91-958-957-2990</p>
-            <p>+91-963-008-8808</p>
+            <a href="tel:+919589572990" className="block hover:underline">
+              +91-958-957-2990 </a>
+            <a href="tel:+919630088808" className="block hover:underline">
+              +91-963-008-8808
+            </a>
           </div>
         </div>
         <div className="   flex flex-col items-center gap-y-5 bg-[#002244] p-5 rounded-2xl flex-1 min-w-[200px] md:min-h-[250px]">
           <FaLocationDot className="lg:text-5xl md:text-4xl text-3xl " />
           <p className="font-bold lg:text-3xl md:text-2xl text-xl">Address</p>
           <div>
-            <p>Lig square,Indore,</p>
-            <p>[M.P.]India</p>
+            <a href="https://www.google.com/maps/place/Lig+Square,+Indore,+Madhya+Pradesh/" target="_blank" rel="noopener noreferrer" className="hover:underline">
+              <p>Lig square,Indore, [M.P.]India</p>
+            </a>
           </div>
         </div>
         <div className="flex flex-col items-center gap-y-5 bg-[#002244] p-5 rounded-2xl flex-1 min-w-[200px] md:min-h-[250px]">
           <MdEmail className="lg:text-5xl md:text-4xl text-3xl" />
           <p className="lg:text-3xl md:text-2xl text-xl font-bold">E-mail</p>
-          <p>Itsunicorntech@gmail.com</p>
+          <a href="mailto:Itsunicorntech@gmail.com" className="hover:underline">
+            <p>Itsunicorntech@gmail.com</p>
+          </a>
         </div>
         <div className="flex flex-col items-center gap-y-5 bg-[#002244] p-5 rounded-2xl flex-1 min-w-[200px] md:min-h-[250px]">
           <BsPeopleFill className="lg:text-5xl md:text-4xl text-3xl" />
           <p className="lg:text-3xl md:text-2xl text-xl font-bold">Follow us</p>
           <div className="flex gap-2 items-center lg:text-4xl text-3xl text-primary">
-            <FaFacebook />
-            <FaXTwitter />
-            <FaLinkedin />
-            <IoLogoWhatsapp />
-            <RiInstagramFill />
+
+            <span className="p-1 bg-[#368DE5] rounded-full text-black text-xl">
+              <FaFacebookF />
+            </span>
+            <span className="p-1 bg-[#368DE5] rounded-full text-black text-xl">
+              <a href="https://twitter.com/its_unicorntech" target="_blank" rel="noopener noreferrer">
+                <FaXTwitter />
+              </a>
+            </span>
+            <span className="p-1 bg-[#368DE5] rounded-full text-black text-xl">
+              <FaLinkedinIn />
+            </span>
+
+            <span className="p-1 bg-[#368DE5] rounded-full text-black text-xl">
+              <a href="https://wa.me/9589572990?text=Hello%20I%20am%20interested" target="_blank" rel="noopener noreferrer">
+
+                <IoLogoWhatsapp />
+              </a>
+            </span>
+
+            <span className="p-1 bg-[#368DE5] rounded-full text-black text-xl">
+              <a href="https://www.instagram.com/its_unicorn_tech/" target="_blank" rel="noopener noreferrer">
+                <AiFillInstagram />
+              </a>
+            </span>
+
+
           </div>
         </div>
       </section>

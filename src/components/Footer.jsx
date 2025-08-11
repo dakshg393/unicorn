@@ -91,11 +91,14 @@ const Footer = () => {
                   Careers
                 </Link>
               </li>
+              
               <li className="hover:text-[#368DE5] transition-all cursor-pointer w-fit duration-300">
+                <Link to={"/about#team"}>
                 Team
+                </Link>
               </li>
               <li className="hover:text-[#368DE5] transition-all cursor-pointer w-fit duration-300">
-                Contact Us
+                <Link to={"/contact"}>Contact Us</Link>
               </li>
             </ul>
           </div>
@@ -103,28 +106,28 @@ const Footer = () => {
             <h3 className="text-[#368DE5] text-[23px] font-bold mb-[19px]">Services</h3>
             <ul className="flex flex-col gap-[10px] font-light">
               <li className="hover:text-[#368DE5] transition-all duration-300 w-fit cursor-pointer">
-                IT Management Services
+                <Link to={"/services?tab=1#services"}>IT Management Services</Link>
               </li>
               <li className="hover:text-[#368DE5] transition-all duration-300 w-fit cursor-pointer">
-                Data Tracking Security
+                 <Link to={"/services?tab=1#services"}>Data Tracking Security</Link>
               </li>
               <li className="hover:text-[#368DE5] transition-all duration-300 w-fit cursor-pointer">
-                Website Development
+                 <Link to={"/services?tab=1#services"}>Website Development</Link>
               </li>
               <li className="hover:text-[#368DE5] transition-all duration-300 w-fit cursor-pointer">
-                CRM Solutions And Design
+                 <Link to={"/services?tab=1#services"}>CRM Solutions And Design</Link>
               </li>
               <li className="hover:text-[#368DE5] transition-all duration-300 w-fit cursor-pointer">
-                UI/UX Design Services
+                 <Link to={"/services?tab=1#services"}>UI/UX Design Services</Link>
               </li>
               <li className="hover:text-[#368DE5] transition-all duration-300 w-fit cursor-pointer">
-                Technology Solution
+                 <Link to={"/services?tab=1#services"}>Technology Solution</Link>
               </li>
               <li className="hover:text-[#368DE5] transition-all duration-300 w-fit cursor-pointer">
-                Software Development
+                 <Link to={"/services?tab=1#services"}>Software Development</Link>
               </li>
               <li className="hover:text-[#368DE5] transition-all duration-300 w-fit cursor-pointer">
-                Graphic Design
+                 <Link to={"/services?tab=1#services"}>Graphic Design</Link>
               </li>
             </ul>
           </div>
@@ -164,16 +167,26 @@ const Footer = () => {
           <div className="flex flex-col gap-4">
             <h2 className="text-lg font-bold">INDIA (HQ)</h2>
             <div className="flex items-center gap-3">
-              <IoMdContacts className="text-xl " /> <p>Itsunicorntech@gmail.com</p>
+              <IoMdContacts className="text-xl " />
+              <a href="mailto:Itsunicorntech@gmail.com"  className="hover:underline"> 
+                <p>Itsunicorntech@gmail.com</p>
+              </a>
             </div>
             <div className="flex items-center gap-3">
-              <FaLocationDot className="text-xl" /> <p>Lig square,Indore, [M.P.]India</p>
+               
+              <FaLocationDot className="text-xl" />
+               <a  href="https://www.google.com/maps/place/Lig+Square,+Indore,+Madhya+Pradesh/"  target="_blank" rel="noopener noreferrer" className="hover:underline">
+                <p>Lig square,Indore, [M.P.]India</p>
+              </a>
             </div>
             <div className="flex gap-3 text-start">
               <IoIosCall className="text-xl mt-1" />
               <p>
-                +91-958-957-2990 <br />
+                <a href="tel:+919589572990" className="block hover:underline">
+                +91-958-957-2990 </a> 
+                <a href="tel:+919630088808" className="block hover:underline">
                 +91-963-008-8808
+                </a>
               </p>
             </div>
           </div>
@@ -185,21 +198,32 @@ const Footer = () => {
         <div className="sm:w-auto w-full">
           <h4 className="text-[18px] font-bold sm:text-start text-center">Social Media</h4>
           <div className="flex items-center sm:justify-normal justify-center sm:gap-4  gap-8 mt-3">
+
             <span className="p-1 bg-[#368DE5] rounded-full text-black text-xl">
               <FaFacebookF />
             </span>
             <span className="p-1 bg-[#368DE5] rounded-full text-black text-xl">
-              <FaXTwitter />
+              <a href="https://twitter.com/its_unicorntech" target="_blank" rel="noopener noreferrer">
+                <FaXTwitter />
+              </a>
             </span>
             <span className="p-1 bg-[#368DE5] rounded-full text-black text-xl">
               <FaLinkedinIn />
             </span>
+
             <span className="p-1 bg-[#368DE5] rounded-full text-black text-xl">
-              <IoLogoWhatsapp />
+              <a href="https://wa.me/9589572990?text=Hello%20I%20am%20interested" target="_blank" rel="noopener noreferrer">
+
+                <IoLogoWhatsapp />
+              </a>
             </span>
+
             <span className="p-1 bg-[#368DE5] rounded-full text-black text-xl">
-              <AiFillInstagram />
+              <a href="https://www.instagram.com/its_unicorn_tech/" target="_blank" rel="noopener noreferrer">
+                <AiFillInstagram />
+              </a>
             </span>
+            
           </div>
         </div>
 
@@ -214,7 +238,7 @@ const Footer = () => {
       <section className="py-6 mt-10 border-t border-[#4B4C4D]">
         <div className="flex justify-between md:flex-row flex-col gap-4 md:items-center font-semibold items-start">
           <p>© UniTech Private Limited 2024. All rights reserved</p>
-          <p>Privacy Policy | Terms & Condition | Site Map</p>
+          {/* <p>Privacy Policy | Terms & Condition | Site Map</p> */}
         </div>
       </section>
     </footer>
