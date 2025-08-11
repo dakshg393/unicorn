@@ -62,7 +62,7 @@ const CompanyDropdown = () => {
           <div>
             <div className="flex items-center gap-2">
               <img src={team} alt="Team" />
-              <Link to={'/about'}><p className="text-lg font-semibold">Team</p></Link>
+              <Link to={'/about#team'}><p className="text-lg font-semibold">Team</p></Link>
             </div>
             <p className="text-sm font-light">We are Friendly Join our team</p>
           </div>
