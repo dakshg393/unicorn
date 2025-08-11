@@ -18,7 +18,7 @@ import ui2 from "../assets/images/ui2.png";
 import ui3 from "../assets/images/ui3.png";
 import ui4 from "../assets/images/ui4.png";
 import Graphic1 from "../assets/images/Graphic1.png";
-import Graphic2 from "../assets/images/graphic1.png";
+import Graphic2 from "../assets/images/Graphic2.png";
 import Graphic3 from "../assets/images/Graphic3.png";
 import Graphic4 from "../assets/images/Graphic4.png";
 import Graphic5 from "../assets/images/Graphic5.png";
